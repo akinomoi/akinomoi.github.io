@@ -198,8 +198,8 @@ header {
 }
 
 .news-date {
-    width: 100px;
-    text-align: left;
+    width: 120px;
+    text-align: right;
     padding-right: 10px;
     white-space: nowrap;
     position: relative;
@@ -208,6 +208,14 @@ header {
 .news-date::before {
     content: '✦';
     color: #E6D8AE;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.news-date::after {
+    content: '✦';
+    color: #E6D8AE;
+    margin-left: 2px;
     margin-right: 5px;
 }
 
