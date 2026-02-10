@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- HTML根元素，设置语言为简体中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 响应式视口设置 -->
+    <title>RefrainBlue</title> <!-- 页面标题 -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <!-- 加载页头页脚的JavaScript -->
+    <script>
+        // 加载页头
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // 加载页脚
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container"> <!-- 主容器 -->
+        <div id="header-container"></div> <!-- 页头加载 -->
+
+		<main class="main-content"> <!-- 主内容区 -->
+            <section class="main-section"> <!-- 主内容区块 -->
+                <div"> <!-- 内容文字 -->
+					<p align="center"><img border="0" src="pic/title.gif"></p><hr><br>
+					<p align="center"><img border="0" src="pic/refrainblue.jpg"></p><br>
+		            <div class="ArticleText" style="text-align:left; max-width:750px;">
+						<p>　　舞台是远离了都市的喧嚣、美丽而宁静的蜻蛉（かげろう）海岸。</p>
+						<p>　　主人公独自来到这片海滩时正在失意的底端，和一个女孩在此命运般地相会了。女孩的名字叫深景（みかげ）。</p>
+						<p>　　在夏日的海边一起共同度过的时光里，两人同时被对方所迷恋，坠入情网。但是，那段幸福并没有能够延续很长时间。</p>
+						<p>　　七年过去了，在巴士公司作为乘务员的主人公随母校东阳学园，再一次踏上了这片充满回忆的土地。为七年前的一幕幕再次闪现而苦恼，与背负着同样命运的学生们心意相通……</p>
+						<p>　　随后，在这份抑郁思念的终点，主人公和其中的一个女孩子渐渐拉近了距离，两人的心灵和身体便相互重迭在了一起……</p>
+						<p>　　“思念”也好、“命运”也好……将人与人的相会串接起来，用温情的笔触描绘出的优秀作品。</p>
+	            </div>
+
+				<div style="font-family:'Palatino Linotype'; font-size:14px; margin:10px 0; line-height:2.5;">
+					<div>- <a href="review.html">Review</a> - <a href="roles.html">Roles</a> - <a href="gamesong.html">Ending Theme</a> -</div>
+					<div>- <a href="ova.html">OVA</a> - <a href="ovasong.html">OVA Ending Theme</a> -</div>
+					<div>- <a href="misc.html">杂谈</a> -</div>
+				</div>
+
+	            <hr style="width:100%; border:1px solid #E6D8AE; margin:20px 0;">
+				<div class="ArticleMemo" style="text-align:center; font-size:14px;">更新翻译：AKI。原始翻译整理：Zzx、Neophoenix、AKI。特别感谢：MoonWalker</div>
+	            <div class="ArticleMemo" style="text-align:center; font-size:14px;">本站所引用的图片文字资料均符合 elf 公司的<a href="elf.html">关于著作物引用的规定</a><br><br>但是 <span style="color:#FF0000;">elf 已经没！有！了！</span>
+                本站 Refrain Blue 的所有内容<span style="color:#FF0000;">在标明作者及译者</span> 后均可自由转载。</div>
+
+			</section>
+        </main>
+
+		<!-- 页脚通过JavaScript加载 -->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>
